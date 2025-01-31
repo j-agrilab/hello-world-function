@@ -3,7 +3,7 @@ from google.cloud import storage
 def upload_file(event, context):
     """Uploads a file to a bucket."""
     # The ID of your GCS bucket
-    bucket_name = "your-bucket-name" 
+    bucket_name = "hmidata" 
 
     # The ID of your GCS object
     blob_name = "test.txt"
