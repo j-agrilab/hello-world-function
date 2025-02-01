@@ -1,10 +1,11 @@
-from google.cloud import storage, logging
+from google.cloud import storage 
+from google.cloud import logging
 
-logger = logging.getLogger(__name__)
+logger = logging.Client().logger(__name__)
 
 def main(event, context):
     """Uploads a file to a bucket."""
-    logger.info("starting hello world function")
+    logger.log_text("starting hello world function", severity="INFO")
     # The ID of your GCS bucket
     bucket_name = "hmidata" 
 
@@ -25,7 +26,7 @@ def main(event, context):
     blob = bucket.blob(blob_name)
     blob.upload_from_string(content)
 
-    logger.info(f"File {blob_name} uploaded to {bucket_name}.")
+    logger.log_text(f"File {blob_name} uploaded to {bucket_name}.", severity="INFO")
 
 if __name__ == '__main__':
     main(None, None)
