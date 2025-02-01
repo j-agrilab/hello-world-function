@@ -1,6 +1,6 @@
 from google.cloud import storage
 
-def upload_file(event, context):
+def main(event, context):
     """Uploads a file to a bucket."""
     # The ID of your GCS bucket
     bucket_name = "hmidata" 
