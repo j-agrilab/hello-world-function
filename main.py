@@ -23,3 +23,6 @@ def main(event, context):
     blob.upload_from_string(content)
 
     print(f"File {blob_name} uploaded to {bucket_name}.")
+
+if __name__ == '__main__':
+    main(None, None)
