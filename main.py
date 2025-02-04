@@ -27,9 +27,10 @@ def main(event, context):
         blob = bucket.blob(blob_name)
         blob.upload_from_string(content)
 
-        logger.log_text(f"File {blob_name} uploaded to {bucket_name}.", severity="INFO")
+        #logger.log_text(f"File {blob_name} uploaded to {bucket_name}.", severity="INFO")
     except:
-        logger.log_text(f"Error running hello world.", severity="ERROR")
+        #logger.log_text(f"Error running hello world.", severity="ERROR")
+        print("error")
 
 if __name__ == '__main__':
     main(None, None)
