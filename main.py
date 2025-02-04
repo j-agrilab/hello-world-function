@@ -5,7 +5,7 @@ logger = logging.Client().logger(__name__)
 
 def main(event, context):
     """Uploads a file to a bucket."""
-    logger.log_text("starting hello world function", severity="INFO")
+    #logger.log_text("starting hello world function", severity="INFO")
     try:
         # The ID of your GCS bucket
         bucket_name = "hmidata" 
