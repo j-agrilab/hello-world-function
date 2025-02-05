@@ -1,7 +1,6 @@
 from google.cloud import storage 
 from google.cloud import logging
 
-logger = logging.Client().logger(__name__)
 
 def main(event, context):
     """Uploads a file to a bucket."""
